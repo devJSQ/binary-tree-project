@@ -33,137 +33,131 @@ class Node {
 ```
 
 
-- `DecesionTree` class is already implemented and added to the DecesionTree java file as the below:
+- `BinaryTree` class is already implemented and added to the source file - java as the below:
 
 ```java
-public class DecisionTree {
 
-    Node root;
+class BinaryTree {
 
-    public DecisionTree(Node root) {
-        this.root = root;
+  Node root;
+
+  public BinaryTree(Node root) {
+    this.root = root;
+  }
+
+
+  // Pre-order traverse
+  public void print() {
+
+    if (this.root == null) {
+      System.out.println("Tree is empty");
+      return;
     }
 
-    public void addRight(String parentQu, String newNodeData) {
+    Stack<Node> stack = new Stack<>();
+    stack.push(root);
 
-        Node newNode = new Node(newNodeData);
-        Node parent = search(parentQu);
+    while (!stack.isEmpty()) {
+      Node currentNode = stack.pop();
 
-        if (parent != null) {
+      System.out.println(" " + currentNode.fileName);
 
-            if (parent.right == null) {
-                parent.right = newNode;
-                System.out.println(newNodeData + " added successfully");
-            } else {
-                System.out.println("parent already has a right child");
-                return;
-            }
-        } else {
-            System.out.println(parentQu + " parent not fount");
-        }
+      if (currentNode.right != null) {
+        stack.push(currentNode.right);
+      }
+
+      if (currentNode.left != null) {
+        stack.push(currentNode.left);
+      }
 
     }
+    return;
+  }
 
-    public void addLeft(String parentQu, String newNodeData) {
-        Node newNode = new Node(newNodeData);
-        Node parent = search(parentQu);
+  public Node search(String target) {
 
-        if (parent != null) {
-
-            if (parent.left == null) {
-                parent.left = newNode;
-                System.out.println(newNodeData + " added successfully");
-            } else {
-                System.out.println("parent already has a right child");
-                return;
-            }
-        } else {
-            System.out.println(parentQu + " parent not fount");
-        }
-
+    if (this.root == null) {
+      System.out.println("Tree is empty");
+      return null;
     }
 
-    public Node search(String target) {
+    Stack<Node> stack = new Stack<>();
+    stack.push(this.root);
 
-        if (root == null) {
-            System.out.println("Tree is empty");
-            return null;
-        }
+    while (!stack.isEmpty()) {
+      Node currentNode = stack.pop();
 
-        Stack<Node> stack = new Stack<>();
-        stack.push(this.root);
+      if (currentNode.fileName == target) {
+        return currentNode;
+      }
 
-        while (!stack.isEmpty()) {
-            Node currentNode = stack.pop();
+      if (currentNode.right != null) {
+        stack.push(currentNode.right);
+      }
 
-            if (currentNode.question == target) {
-                return currentNode;
-            }
+      if (currentNode.left != null) {
+        stack.push(currentNode.left);
+      }
 
-            if (currentNode.right != null) {
-                stack.push(currentNode.right);
-            }
-
-            if (currentNode.left != null) {
-                stack.push(currentNode.left);
-            }
-
-        }
-        return null;
     }
+    return null;
+  }
+
+  public void addRight(String parentData, String newData) {
+
+    Node newNode = new Node(newData);
+    Node parent = search(parentData);
+
+    if (parent != null) {
+
+      if (parent.right == null) {
+        parent.right = newNode;
+        System.out.println(newNode.fileName + " added successfully");
+      } else {
+        System.out.println("parent already has a right child");
+        return;
+      }
+    } else {
+      System.out.println(parent + " parent not fount");
+    }
+
+  }
+
+  public void addLeft(String parentData, String newData) {
+
+    Node newNode = new Node(newData);
+    Node parent = search(parentData);
+
+    if (parent != null) {
+
+      if (parent.left == null) {
+        parent.left = newNode;
+        System.out.println(newNode.fileName + " added successfully");
+      } else {
+        System.out.println("parent already has a left child");
+        return;
+      }
+    } else {
+      System.out.println(parentData + " parent not fount");
+    }
+
+  }
 
 ```  
   
 In `main` function perform the following actions:
 
-1 - Create a DecisionTree object with the name (decisionTree) and (decisionTree) should hold the root question.   
-2 - Add the rest of the questions to complete the tree.     
-3 - Run the code and try it.
+1 - Create a BinaryTree object holding the root node.   
+2 - Add the rest of the node to complete the tree.     
+3 - Run the code.
 
 ```java
 
-public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        /* Add your code here */
+  /* add your code here */
 
-        System.out.println("---------------------------------------------");
-
-        Node currentNode = decisionTree.root;
-        System.out.println(decisionTree.root.question);
-        Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.nextLine();
-        Boolean acceptOffer = true;
-
-        while (currentNode.right != null) {
+  }
 
 
-            if ("yes".equalsIgnoreCase(userInput)) {
-
-                currentNode = currentNode.right;
-                System.out.println(currentNode.question);
-                userInput = scanner.nextLine();
-                acceptOffer = true;
-
-            } else if ("no".equalsIgnoreCase(userInput)) {
-
-                acceptOffer = false;
-                break;
-
-
-            } else {
-
-                System.out.println("Invalid input. Please answer with yes or no.");
-
-            }
-
-        }
-        scanner.close();
-
-        if(acceptOffer){
-            System.out.println("Accept the offer");
-        }else {
-            System.out.println("Reject the offer");
-        }
-
-    }
 ```
