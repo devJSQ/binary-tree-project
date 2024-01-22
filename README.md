@@ -1,33 +1,24 @@
-# Binary tree - Decision tree
-
+# Binary tree
+   
 ### Objective
-In this project, our objective is to understand how to build the decesion tree, how to define the decesion based on specific questions.
-
-### Problem
-Create a decision tree to decide whether to accept the job offer or not.
-
-- Ahmed received a job offer and he has some questions to be asked before he can decide to accept the offer or not:   
-Is the salary above 10,000 SAR?   
-Is the office near my hosue?   
-Is the work enivironment convenient?   
-
-If the above questions answered with a 'yes' Ahmed will accept the offer otherwise he will rejects the offer.
-
-- Decision tree for the above questions should be the same as below (Figuer 1):
-
+In this project, our objective is to understand how to build the binary tree.
+  
+### Problem  
+Create a binary tree for a computer storage as the belwo (Figuer 1):
+  
+  
 Figuer 1    
-<img width="910" alt="Introduction to Arrays-01" src="https://github.com/SAFCSP-Team/data-structures-and-algorithms-bootcamp/blob/main/data-structures-and-algorithms-101/02-data-structures/05-tree/images/Decision-Tree-Project.jpg">
-
-
-
-### Implementation
+<img width="910" alt="Introduction to Arrays-01" src="https://github.com/SAFCSP-Team/data-structures-and-algorithms-bootcamp/blob/main/data-structures-and-algorithms-101/02-data-structures/05-tree/images/Binary-tree-project.jpg">
+  
+  
+### Implementation  
 Using Java programming language: 
-
-- `Node` class is already implemented and added to the DecesionTree java file as the below:
+  
+- `Node` class is already implemented and added to the DecesionTree java file as the below:  
 ```java
 class Node {
 
-    String question;
+    String fileName;
 
     Node right;
     Node left;
