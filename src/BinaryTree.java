@@ -127,16 +127,7 @@ class BinaryTree {
 
   public static void main(String[] args) {
 
-    BinaryTree tree = new BinaryTree(new Node("This Computer"));
-
-    tree.addLeft("This Computer", "Local disk C:");
-    tree.addRight("This Computer", "Disk D:");
-
-    tree.addLeft("Local disk C:","Programs" );
-    tree.addRight("Local disk C:","Windows" );
-
-    System.out.println("Print tree values: ");
-    tree.print();
+   /* add your code here */
 
   }
 
