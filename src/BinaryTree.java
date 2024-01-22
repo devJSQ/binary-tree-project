@@ -29,7 +29,7 @@ class BinaryTree {
 
 
   // Pre-order traverse
-  public void printTreeValues() {
+  public void print() {
 
     if (this.root == null) {
       System.out.println("Tree is empty");
@@ -136,7 +136,7 @@ class BinaryTree {
     tree.addRight("Local disk C:","Windows" );
 
     System.out.println("Print tree values: ");
-    tree.printTreeValues();
+    tree.print();
 
   }
 
