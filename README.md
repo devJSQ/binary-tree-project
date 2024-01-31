@@ -4,17 +4,17 @@
 In this project, our objective is to understand how to build the binary tree.
   
 ### Problem  
-Create a binary tree for a computer storage as the belwo (Figuer 1):
+Create a binary tree for computer storage as below (Figure 1):
   
   
-Figuer 1    
+Figure 1    
 <img width="910" alt="Introduction to Arrays-01" src="https://github.com/SAFCSP-Team/data-structures-and-algorithms-bootcamp/blob/main/data-structures-and-algorithms-101/02-data-structures/05-tree/images/Binary-tree-project.jpg">
   
   
 ### Implementation  
 Using Java programming language: 
   
-- `Node` class is already implemented and added to the DecesionTree java file as the below:  
+- The `Node` class is already implemented and added to the DecesionTree java file as below:  
 ```java
 class Node {
 
