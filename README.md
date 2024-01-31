@@ -1,7 +1,7 @@
 # Binary tree
    
 ### Objective
-In this project, our objective is to understand how to build the binary tree.
+This project aims to understand how to build the binary tree.
   
 ### Problem  
 Create a binary tree for computer storage as below (Figure 1):
@@ -33,7 +33,7 @@ class Node {
 ```
 
 
-- `BinaryTree` class is already implemented and added to the source file - java as the below:
+- The `BinaryTree` class is already implemented and added to the source file - java as the below:
 
 ```java
 
@@ -145,7 +145,7 @@ class BinaryTree {
 
 ```  
   
-In `main` function perform the following actions:
+In the `main` method perform the following actions:
 
 1 - Create a BinaryTree object holding the root node.   
 2 - Add the rest of the node to complete the tree.     
