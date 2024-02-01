@@ -14,7 +14,7 @@ Figure 1
 ### Implementation  
 Using Java programming language: 
   
-- The `Node` class is already implemented and added to the DecesionTree java file as below:  
+- The `Node` class is already implemented and added to the source file - java as the below:   
 ```java
 class Node {
 
