@@ -144,6 +144,8 @@ class BinaryTree {
 
   }
 
+}
+
 ```  
   
 In the `main` method perform the following actions:
