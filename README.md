@@ -36,6 +36,7 @@ class Node {
 - The `BinaryTree` class is already implemented and added to the source file - java as the below:
 
 ```java
+import java.util.Stack;
 
 class BinaryTree {
 
