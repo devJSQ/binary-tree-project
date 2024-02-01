@@ -23,8 +23,8 @@ class Node {
     Node right;
     Node left;
 
-    public Node(String question) {
-        this.question = question;
+    public Node(String fileName) {
+        this.fileName = fileName;
         this.right = null;
         this.left = null;
     }
