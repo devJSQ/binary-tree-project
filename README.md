@@ -1,4 +1,4 @@
-# Binary tree
+# Binary tree project
    
 ### Objective
 This project aims to understand how to build the binary tree.
