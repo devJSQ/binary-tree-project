@@ -127,8 +127,13 @@ class BinaryTree {
 
   public static void main(String[] args) {
 
-   /* add your code here */
+  BinaryTree b1 = new BinaryTree(new Node("this computer"));
+  b1.addRight("this computer", "Disk D");
+  b1.addLeft("this computer", "local disk");
+  b1.addLeft("local disk", "program");
+  b1.addRight("local disk", "windows");
 
   }
 
 }
+
